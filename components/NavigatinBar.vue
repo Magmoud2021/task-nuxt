@@ -38,10 +38,10 @@
       </div>
     </div>
     <div class="asdd">
-    <h3 v-for="album in albums" :key="album">{{album.title}}</h3>
+      <h3  v-for="album in albums" :key="album">{{ album.title }}</h3>
     </div>
-    <button @click="fetchbooks()">books</button>
 
+<button  @click="fetchbooks()" type="button" class="btn btn-danger" data-mdb-ripple-color="dark">books</button>
 
     <!-- <div class="posts">
       <div class="post-card" v-for="book in books" :key="book.id">
@@ -65,17 +65,17 @@ export default {
       name: "Mahmoud ",
       titel:
         "In this lesson, we're exploring where to put your navbar and other parts",
-    albums: {
-    userId: "",
-    id:"",
-    title:""
-     },
+      albums: {
+        userId: "",
+        id: "",
+        title: "",
+      },
     };
   },
   methods: {
     async fetchbooks() {
       const albums = await this.$axios.$get(
-        "https://jsonplaceholder.typicode.com/albums"
+        "https://jsonplaceholder.typicode.com/albums/"
       );
       this.albums = albums;
       // console.log("dsfsdfds", books);
@@ -95,7 +95,6 @@ export default {
 
   //   }
   // }
-
 
   // async asyncData({ $axios }) {
   //   const books = await $axios.$get(
@@ -118,6 +117,17 @@ export default {
 <style scoped>
 img {
   width: 50px;
+}
+@media (max-width: 768px){
+img {
+  display: none;
+}
+.text h1{
+  text-align: center;
+}
+.text p{
+  text-align: center;
+}
 }
 .header {
   background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)),
@@ -151,17 +161,18 @@ span {
   color: orange;
   font-size: 40px;
 }
-.asdd{
-display: flex;
- justify-content: space-around;
- align-items: center;
- display:inline-block;
+.asdd {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: inline-block;
 }
-h3{
-
-width: 100%;
-margin: auto;
-color: red;
-
+h3 {
+  width: 100%;
+  margin: auto;
+  color: red;
+}
+  .naa a{
+  margin-right: 50px;
 }
 </style>

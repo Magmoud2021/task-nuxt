@@ -10,7 +10,7 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">{{cardtitel}}</h5>
+            <h5 class="card-title">{{ cardtitel }}</h5>
             <p class="card-text">
               This is a longer card with supporting text below as a natural
               lead-in to additional content. This content is a little bit
@@ -27,7 +27,7 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">{{cardtitel}}</h5>
+            <h5 class="card-title">{{ cardtitel }}</h5>
             <p class="card-text">
               This is a longer card with supporting text below as a natural
               lead-in to additional content. This content is a little bit
@@ -44,7 +44,7 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">{{cardtitel}}</h5>
+            <h5 class="card-title">{{ cardtitel }}</h5>
             <p class="card-text">
               This is a longer card with supporting text below as a natural
               lead-in to additional content.
@@ -60,7 +60,7 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">{{cardtitel}}</h5>
+            <h5 class="card-title">{{ cardtitel }}</h5>
             <p class="card-text">
               This is a longer card with supporting text below as a natural
               lead-in to additional content. This content is a little bit
@@ -88,6 +88,25 @@
         </ul>
       </div>
     </div>
+    <iframe
+      v-show="isShowing"
+      src="https://github.com/Magmoud2021/task-nuxt"
+      frameborder="0"
+    ></iframe>
+    <button @click="isShowing ^= true">Click Me</button>
+   <div class="container">
+    <div class="row  ">
+        <div class="sss col d-flex justify-content-center align-content-center">
+          <img class="cc" src="@/assets/imge/pexels-photo-220453.jpeg" alt="" />
+        </div>
+        <div class="col d-flex justify-content-center align-content-center">
+          <img class="cc" src="@/assets/imge/pexels-photo-220453.jpeg" alt="" />
+        </div>
+        <div class="col  d-flex justify-content-center align-content-center">
+          <img class="cc" src="@/assets/imge/pexels-photo-220453.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
     <Footer />
   </div>
 </template>
@@ -100,25 +119,40 @@ import splide from "@splidejs/splide";
 export default {
   components: {
     axios,
-   splide,
+    splide,
   },
   name: "IndexPage",
-  data(){
-    return{
-      cardtitel:"your profile",
-    }
-  }
+  data() {
+    return {
+      cardtitel: "your profile",
+      isShowing: false,
+    };
+  },
 };
 </script>
 <style scoped>
 .asd {
-
   margin-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
 }
-img{
-  border-radius:5px;
+img {
+  border-radius: 5px;
 }
+iframe {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  width: 100%;
+  height: 300px;
+}
+.cc{
+  width:200px;
+  height: 100%;
+  border-radius: 10px;
 
+}
+.col{
+  margin-bottom: 10px;
+}
 </style>
