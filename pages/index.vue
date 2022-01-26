@@ -5,7 +5,7 @@
       <div class="col">
         <div class="card">
           <img
-            src="@/assets/imge/pexels-photo-220453.jpeg"
+            src="@/assets/imge/download.png"
             class="card-img-top"
             alt="..."
           />
@@ -22,7 +22,7 @@
       <div class="col">
         <div class="card">
           <img
-            src="@/assets/imge/pexels-photo-220453.jpeg"
+            src="@/assets/imge/download.png"
             class="card-img-top"
             alt="..."
           />
@@ -39,7 +39,7 @@
       <div class="col">
         <div class="card">
           <img
-            src="@/assets/imge/pexels-photo-220453.jpeg"
+            src="@/assets/imge/download.png"
             class="card-img-top"
             alt="..."
           />
@@ -55,7 +55,7 @@
       <div class="col">
         <div class="card">
           <img
-            src="@/assets/imge/pexels-photo-220453.jpeg"
+            src="@/assets/imge/download.png"
             class="card-img-top"
             alt="..."
           />
@@ -70,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div class="splide">
+    <!-- <div class="splide">
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
@@ -87,27 +87,29 @@
           </li>
         </ul>
       </div>
-    </div>
-    <iframe
+    </div> -->
+    <!-- <iframe
       v-show="isShowing"
       src="https://github.com/Magmoud2021/task-nuxt"
       frameborder="0"
     ></iframe>
-    <button @click="isShowing ^= true">Click Me</button>
-   <div class="container">
-    <div class="row  ">
+    <button @click="isShowing ^= true">Click Me</button> -->
+
+    <div class="container">
+      <div class="row">
         <div class="sss col d-flex justify-content-center align-content-center">
-          <img class="cc" src="@/assets/imge/pexels-photo-220453.jpeg" alt="" />
+          <img class="cc" src="@/assets/imge/56773306.png" alt="" />
         </div>
         <div class="col d-flex justify-content-center align-content-center">
-          <img class="cc" src="@/assets/imge/pexels-photo-220453.jpeg" alt="" />
+          <img class="cc" src="@/assets/imge/56773306.png" alt="" />
         </div>
-        <div class="col  d-flex justify-content-center align-content-center">
-          <img class="cc" src="@/assets/imge/pexels-photo-220453.jpeg" alt="" />
+        <div class="col d-flex justify-content-center align-content-center">
+          <img class="cc" src="@/assets/imge/56773306.png" alt="" />
         </div>
       </div>
     </div>
-    <Footer />
+
+    <Footer :name="name" :titel="Titel" :phone="phone"  />
   </div>
 </template>
 
@@ -115,7 +117,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import splide from "@splidejs/splide";
-
 export default {
   components: {
     axios,
@@ -126,6 +127,11 @@ export default {
     return {
       cardtitel: "your profile",
       isShowing: false,
+
+      name: "mahmoud",
+      Titel: "maddi",
+      phone: 115511,
+      // carss: ["mahmoud", "salah", "saadi"],
     };
   },
 };
@@ -146,13 +152,28 @@ iframe {
   width: 100%;
   height: 300px;
 }
-.cc{
-  width:200px;
+.cc {
+  width: 200px;
   height: 100%;
   border-radius: 10px;
-
 }
-.col{
+.col {
   margin-bottom: 10px;
 }
+/* stor */
+div {
+  margin-bottom: 10px;
+}
+.count {
+  font-size: 40px;
+}
+button {
+  width: 50px;
+  margin: 0 10px;
+  padding: 5px;
+  background-color: seashell;
+  outline: none;
+  border-radius: 5px;
+}
+
 </style>

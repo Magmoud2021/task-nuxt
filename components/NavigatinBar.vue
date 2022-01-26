@@ -38,10 +38,18 @@
       </div>
     </div>
     <div class="asdd">
-      <h3  v-for="album in albums" :key="album">{{ album.title }}</h3>
+      <h3 v-for="album in albums" :key="album">{{ album.title }}</h3>
     </div>
 
-<button  @click="fetchbooks()" type="button" class="btn btn-danger" data-mdb-ripple-color="dark">books</button>
+    <button
+      v-tooltip.top-center="msg"
+      @click="fetchbooks()"
+      type="button"
+      class="btn btn-danger"
+      data-mdb-ripple-color="dark"
+    >
+      books
+    </button>
 
     <!-- <div class="posts">
       <div class="post-card" v-for="book in books" :key="book.id">
@@ -65,11 +73,14 @@ export default {
       name: "Mahmoud ",
       titel:
         "In this lesson, we're exploring where to put your navbar and other parts",
+
       albums: {
         userId: "",
         id: "",
         title: "",
+        show: true,
       },
+      msg: "AsyncData and fetch Api",
     };
   },
   methods: {
@@ -118,16 +129,16 @@ export default {
 img {
   width: 50px;
 }
-@media (max-width: 768px){
-img {
-  display: none;
-}
-.text h1{
-  text-align: center;
-}
-.text p{
-  text-align: center;
-}
+@media (max-width: 768px) {
+  img {
+    display: none;
+  }
+  .text h1 {
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+  }
 }
 .header {
   background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)),
@@ -172,7 +183,7 @@ h3 {
   margin: auto;
   color: red;
 }
-  .naa a{
+.naa a {
   margin-right: 50px;
 }
 </style>
